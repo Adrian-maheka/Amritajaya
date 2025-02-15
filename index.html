@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AmritaJaya – A Cozy and Comfortable Stay in Bali. Experience luxury accommodation at affordable prices.">
+    <meta name="keywords" content="guest house bali, amritajaya, accommodation bali, affordable luxury stay">
+    <meta name="author" content="AmritaJaya Guest House">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    
+    <meta property="og:title" content="AmritaJaya Guest House - Luxury Stay in Bali">
+    <meta property="og:description" content="Experience comfortable and affordable luxury accommodation in Bali">
+    <meta property="og:image" content="https://amritajaya.com/og-image.jpg">
+    <meta property="og:url" content="https://amritajaya.com">
+    
+    <title>AmritaJaya Guest House - Your Cozy Stay in Bali</title>
+    
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="logo.jpg" as="image">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+
+    <header>
+        <nav role="navigation">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <img src="logo.jpg" alt="AmritaJaya Guest House Logo" class="logo" width="50" height="50">
+                <div style="display: flex; align-items: center; margin-left: auto;">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                    </ul>
+                    <button class="menu-toggle" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">☰</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to <span style="color: #ffd700;">AmritaJaya GuestHouse</span></h1>
+                <p>Enjoy a perfect blend of luxury & comfort at an affordable price.</p>
+                <a href="#booking" class="submit-btn" style="display: inline-block; margin-top: 1rem;">Book Now</a>
+            </div>
+        </section>
+
+        <section id="rooms" class="container">
+            <h2>Our Rooms</h2>
+            <div class="room">
+                <h3>Type 1 - Single Bed Room</h3>
+                <p>Price: Rp.400k/night</p>
+                <p>Availability: 5 Rooms Available</p>
+                <ul>
+                    <li>Single comfortable bed</li>
+                    <li>AC</li>
+                    <li>TV</li>
+                    <li>Wi-Fi</li>
+                    <li>Workspace</li>
+                    <li>Parking</li>
+                    <li>Swimming Pool</li>
+                    <li>Small Kitchen</li>
+                    <li>Hot Shower</li>
+                    <li>Breakfast on Request</li>
+                    <li>Balcony and Garden</li>
+                    <li>Fridge</li>
+                </ul>
+            </div>
+            <div class="room">
+                <h3>Type 2 - Double Bed Room</h3>
+                <p>Price: Rp.800k/night</p>
+                <p>Availability: 1 Room Available</p>
+                <ul>
+                    <li>Double comfortable bed</li>
+                    <li>AC</li>
+                    <li>TV</li>
+                    <li>Wi-Fi</li>
+                    <li>Workspace</li>
+                    <li>Parking</li>
+                    <li>Swimming Pool</li>
+                    <li>Small Kitchen</li>
+                    <li>Hot Shower</li>
+                    <li>Breakfast on Request</li>
+                    <li>Balcony and Garden</li>
+                    <li>Fridge</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="gallery" class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-container">
+                <video class="gallery-video" controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="gallery-images">
+                    <img src="image1.jpg" alt="Guest House Image 1">
+                    <img src="image2.jpg" alt="Guest House Image 2">
+                    <img src="image3.jpg" alt="Guest House Image 3">
+                    <img src="image4.jpg" alt="Guest House Image 4">
+                    <img src="image5.jpg" alt="Guest House Image 5">
+                    <img src="image6.jpg" alt="Guest House Image 6">
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="container">
+            <h2>Guest Reviews</h2>
+            <div class="review-container">
+                <div class="review">
+                    <h4>Astadi Jaya</h4>
+                    <p>⭐⭐⭐⭐⭐</p>
+                    <p>"Amazing stay! The facilities were excellent and staff was very friendly."</p>
+                </div>
+                <div class="review">
+                    <h4>Kadek Yuda</h4>
+                    <p>⭐⭐⭐⭐</p>
+                    <p>"Very comfortable rooms and great location. Will definitely come back!"</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking-contact" class="container" style="display: flex; gap: 2rem;">
+            <div style="flex: 1;">
+                <section id="booking" style="text-align: center;">
+                    <h2>Book Your Stay</h2>
+                    <form id="bookingForm" onsubmit="submitToWhatsApp(event)" style="display: flex; justify-content: center;">
+                        <div class="form-grid">
+                            <div class="form-group" style="max-width: 400px; margin: 0 auto;">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+
+                                <label for="check-in">Check-in Date</label>
+                                <input type="date" id="check-in" name="check-in" required>
+
+                                <label for="check-out">Check-out Date</label>
+                                <input type="date" id="check-out" name="check-out" required>
+
+                                <label for="room-type">Select Room Type</label>
+                                <select id="room-type" name="room-type" required>
+                                    <option value="single1">1 Single Bed Room</option>
+                                    <option value="double2">2 Double Bed Rooms</option>
+                                </select>
+
+                                <label for="room-count">Number of Rooms</label>
+                                <input type="number" id="room-count" name="room-count" min="1" max="6" required>
+
+                                <label for="message">Additional Requests</label>
+                                <textarea id="message" name="message"></textarea>
+
+                                <input type="submit" value="Book Now" style="margin-top: 20px;">
+                            </div>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <div style="flex: 1;">
+                <section id="location">
+                    <h2>Our Location</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.4922172630386!2d115.17369530877878!3d-8.644647091366256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd239339b9a9f0f%3A0xdec926367874e5d3!2sWiduri%20Permai!5e0!3m2!1sid!2sid!4v1739604178440!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </section>
+
+                <section id="contact">
+                    <h2>Contact Us</h2>
+                    <div class="location-info">
+                        <p>📍 Jalan Muding Sari Perum Widuri Permai Blok B1 / No 1B</p>
+                    <p>Phone: <a href="tel:+62818101916">+62 818-101-916</a></p>
+                    <p>Email: <a href="mailto:amritajayaguesthouse@gmail.com">amritajayaguesthouse@gmail.com</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/amritajaya_guesthouse">@amritajayaguesthouse</a></p>
+                </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 AmritaJaya Guest House. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let checkin = document.getElementById("check-in").value;
+            let checkout = document.getElementById("check-out").value;
+            let roomType = document.getElementById("room-type").value;
+            let roomCount = document.getElementById("room-count").value;
+            let message = document.getElementById("message").value;
+    
+            let roomTypeText = roomType === "single1" ? "1 Single Bed Room" : "2 Double Bed Rooms";
+    
+            let whatsappMessage = `Halo, saya ingin melakukan pemesanan di AmritaJaya Guest House.%0A%0A` +
+                `Nama: ${name}%0A` +
+                `Email: ${email}%0A` +
+                `No HP: ${phone}%0A` +
+                `Check-in: ${checkin}%0A` +
+                `Check-out: ${checkout}%0A` +
+                `Tipe Kamar: ${roomTypeText}%0A` +
+                `Jumlah Kamar: ${roomCount}%0A` +
+                `Permintaan Tambahan: ${message}%0A%0A` +
+                `Mohon konfirmasi ketersediaan kamar. Terima kasih.`;
+    
+            let whatsappURL = `https://wa.me/628873749149?text=${whatsappMessage}`;
+            window.open(whatsappURL, "_blank");
+        });
+    </script>
+   </body>
+</html>
