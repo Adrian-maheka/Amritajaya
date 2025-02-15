@@ -44,12 +44,15 @@
 }
 
 /* Base Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: var(--background-light);
     color: var(--text-dark);
-    scroll-behavior: smooth;
 }
 
 .container {
@@ -94,7 +97,7 @@ nav {
     display: flex;
     list-style: none;
     gap: 1rem;
-    margin-left: auto; /* Mendorong menu ke kanan */
+    margin-left: auto;
 }
 
 .nav-links a {
@@ -107,6 +110,11 @@ nav {
 
 .nav-links a:hover, .nav-links a:focus {
     color: var(--secondary-color);
+}
+
+/* Smooth scroll offset for fixed header */
+[id] {
+    scroll-margin-top: 100px;
 }
 
 .menu-toggle {
