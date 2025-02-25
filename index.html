@@ -15,6 +15,7 @@
     <meta property="og:description" content="Experience comfortable and affordable luxury accommodation in Bali">
     <meta property="og:image" content="https://amritajaya.com/og-image.jpg">
     <meta property="og:url" content="https://amritajaya.com">
+    
     <link rel="icon" type="image/x-icon" href="Logo.jpg">
     <title>AmritaJaya Guest House - Your Cozy Stay in Bali</title>
     
@@ -22,6 +23,7 @@
     <link rel="preload" href="Logo.jpg" as="image">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
     <style>
         @media screen and (max-width: 768px) {
             .nav-links {
@@ -116,6 +118,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav role="navigation">
@@ -136,7 +139,7 @@
     <main id="main-content">
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Welcome to <span style="color: #ffd700;">AmritaJaya GuestHouse</span></h1>
+                <h1>Welcome to <span style="color: #f2ff00b0;">AmritaJaya GuestHouse</span></h1>
                 <p>Enjoy a perfect blend of luxury & comfort at an affordable price.</p>
                 <a href="#booking" class="submit-btn" style="display: inline-block; margin-top: 1rem;">Book Now</a>
             </div>
@@ -163,9 +166,10 @@
                     <li>Fridge</li>
                 </ul>
             </div>
+            
             <div class="room">
                 <h3>Type 2 - Double Bed Room</h3>
-                <p>Price: Rp.800k/night</p>
+                <p>Price: Rp.600k/night</p>
                 <p>Availability: 1 Room Available</p>
                 <ul>
                     <li>Double comfortable bed</li>
@@ -202,27 +206,11 @@
             </div>
         </section>
 
-        <section id="reviews" class="container">
-            <h2>Guest Reviews</h2>
-            <div class="review-container">
-                <div class="review">
-                    <h4>Astadi Jaya</h4>
-                    <p>⭐⭐⭐⭐⭐</p>
-                    <p>"Amazing stay! The facilities were excellent and staff was very friendly."</p>
-                </div>
-                <div class="review">
-                    <h4>Kadek Yuda</h4>
-                    <p>⭐⭐⭐⭐</p>
-                    <p>"Very comfortable rooms and great location. Will definitely come back!"</p>
-                </div>
-            </div>
-        </section>
-
         <section id="booking-contact" class="container" style="display: flex; gap: 2rem;">
             <div style="flex: 1;">
                 <section id="booking" style="text-align: center;">
                     <h2>Book Your Stay</h2>
-                    <form id="bookingForm" onsubmit="submitToWhatsApp(event)" style="display: flex; justify-content: center;">
+                    <form id="bookingForm" onsubmit="submitBooking(event)" style="display: flex; justify-content: center;">
                         <div class="form-grid">
                             <div class="form-group" style="max-width: 400px; margin: 0 auto;">
                                 <label for="name">Full Name</label>
@@ -242,12 +230,16 @@
 
                                 <label for="room-type">Select Room Type</label>
                                 <select id="room-type" name="room-type" required>
-                                    <option value="single1">1 Single Bed Room</option>
-                                    <option value="double2">2 Double Bed Rooms</option>
+                                    <option value="">-- Select Room Type --</option>
+                                    <option value="single">Single Bed Room</option>
+                                    <option value="double">Double Bed Room</option>
                                 </select>
 
-                                <label for="room-count">Number of Rooms</label>
-                                <input type="number" id="room-count" name="room-count" min="1" max="6" required>
+                                <label for="single-rooms">Number of Single Bed Rooms</label>
+                                <input type="number" id="single-rooms" name="single-rooms" min="0" max="5" value="0" required>
+
+                                <label for="double-rooms">Number of Double Bed Rooms</label>
+                                <input type="number" id="double-rooms" name="double-rooms" min="0" max="1" value="0" required>
 
                                 <label for="message">Additional Requests</label>
                                 <textarea id="message" name="message"></textarea>
@@ -264,29 +256,67 @@
                     <h2>Our Location</h2>
                     <div class="map-container">
                         <iframe 
-                        src="https://maps.google.com/maps?q=Jalan%20Muding%20Sari%20Perum%20Widuri%20Permai%20Blok%20B1%20No%201B&t=&z=13&ie=UTF8&iwloc=&output=embed" 
-                        width="600" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-
+                            src="https://maps.google.com/maps?q=Jalan%20Muding%20Sari%20Perum%20Widuri%20Permai%20Blok%20B1%20No%201B&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                     <div class="location-info">
                         <p>📍 Jalan Muding Sari Perum Widuri Permai Blok B1 / No 1B</p>
-                        </div>
+                    </div>
                 </section>
 
                 <section id="contact">
                     <h2>Contact Us</h2>
-                    
-                        <p>Phone: <a href="tel:+62818101916">+62 818-101-916</a></p>
-                        <p>Email: <a href="mailto:amritajayaguesthouse@gmail.com">amritajayaguesthouse@gmail.com</a></p>
-                        <p>Instagram: <a href="https://www.instagram.com/amritajaya_guesthouse">@amritajayaguesthouse</a></p>
-                    </div>
+                    <p>Phone: <a href="tel:+62818101916">+62 818-101-916</a></p>
+                    <p>Email: <a href="mailto:amritajayaguesthouse@gmail.com">amritajayaguesthouse@gmail.com</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/amritajaya_guesthouse">@amritajayaguesthouse</a></p>
                 </section>
+            </div>
+        </section>
+
+        <section id="reviews" class="container">
+            <h2>Guest Reviews</h2>
+            <div class="review-container">
+                <div class="review">
+                    <div class="reviewer-info">
+                        <img src="default-avatar.jpg" alt="Profile Photo" class="reviewer-img">
+                        <h4>Astadi Jaya</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Amazing stay experience! Great facilities and very friendly staff. Clean and comfortable rooms. Strategic location close to city center. Highly recommended!"</p>
+                        <span class="review-date">December 2024</span>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="reviewer-info">
+                        <img src="default-avatar.jpg" alt="Profile Photo" class="reviewer-img">
+                        <h4>Kadek Yuda</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Very comfortable rooms and strategic location. Excellent service. Will definitely come back!"</p>
+                        <span class="review-date">January 2025</span>
+                    </div>
+                </div>
+
+                <div class="review">
+                    <div class="reviewer-info">
+                        <img src="default-avatar.jpg" alt="Profile Photo" class="reviewer-img">
+                        <h4>Made Surya</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                    </div>
+                    <div class="review-content">
+                        <p>"Perfect place for family vacation. Peaceful and comfortable atmosphere. Staff are very helpful and friendly. Cleanliness is well maintained."</p>
+                        <span class="review-date">December 2024</span>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -305,34 +335,33 @@
             menuButton.innerHTML = isExpanded ? '☰' : '✕';
         }
 
-        document.querySelector("form").addEventListener("submit", function (event) {
+        function submitBooking(event) {
             event.preventDefault();
     
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let phone = document.getElementById("phone").value;
-            let checkin = document.getElementById("check-in").value;
-            let checkout = document.getElementById("check-out").value;
-            let roomType = document.getElementById("room-type").value;
-            let roomCount = document.getElementById("room-count").value;
-            let message = document.getElementById("message").value;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const checkin = document.getElementById("check-in").value;
+            const checkout = document.getElementById("check-out").value;
+            const roomType = document.getElementById("room-type").value;
+            const singleRooms = document.getElementById("single-rooms").value;
+            const doubleRooms = document.getElementById("double-rooms").value;
+            const message = document.getElementById("message").value;
     
-            let roomTypeText = roomType === "single1" ? "1 Single Bed Room" : "2 Double Bed Rooms";
-    
-            let whatsappMessage = `Halo, saya ingin melakukan pemesanan di AmritaJaya Guest House.%0A%0A` +
-                `Nama: ${name}%0A` +
+            const whatsappMessage = `Hello, I would like to make a reservation at AmritaJaya Guest House.%0A%0A` +
+                `Name: ${name}%0A` +
                 `Email: ${email}%0A` +
-                `No HP: ${phone}%0A` +
+                `Phone: ${phone}%0A` +
                 `Check-in: ${checkin}%0A` +
                 `Check-out: ${checkout}%0A` +
-                `Tipe Kamar: ${roomTypeText}%0A` +
-                `Jumlah Kamar: ${roomCount}%0A` +
-                `Permintaan Tambahan: ${message}%0A%0A` +
-                `Mohon konfirmasi ketersediaan kamar. Terima kasih.`;
+                `Room Type: ${roomType}%0A` +
+                `Single Bed Rooms: ${singleRooms}%0A` +
+                `Double Bed Rooms: ${doubleRooms}%0A` +
+                `Additional Requests: ${message}%0A%0A` +
+                `Please confirm room availability. Thank you.`;
     
-            let whatsappURL = `https://wa.me/628873749149?text=${whatsappMessage}`;
-            window.open(whatsappURL, "_blank");
-        });
+            window.open(`https://wa.me/62818101916?text=${whatsappMessage}`, '_blank');
+        }
     </script>
-   </body>
+</body>
 </html>
